@@ -34,6 +34,13 @@ public class MemberController {
         return "redirect:/";
     }
 
+    @PostMapping(value = "/members/login")
+    public String login(String id, String password)
+    {
+        boolean id_same, pass_same;
+
+    }
+
     @GetMapping("/members")
     public String list(Model model){
         List<Member> members = memberService.findMembers();

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-public class TimTraceAop {
+public class TimeTraceAop {
 
     @Around("execution(* com.nds.nongshim..*(..))")
     public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
