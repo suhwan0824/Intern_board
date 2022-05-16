@@ -28,14 +28,14 @@ public class JsonReader {
         try {
             BufferedReader rd = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
             String jsonText = readAll(rd);
-            JSONObject result = new JSONObject();
+            JSONObject result = new JSONObject(jsonText);
            return result;
         } finally {
             is.close();
         }
     }
 
-    public static void main(String[] args) throws IOException, JSONException {
+    /*public static void main(String[] args) throws IOException, JSONException {
         JSONObject all = readJsonFromUrl("https://nzin.nongshim.com/api/nz_webzine.php?rows=300&type=json");
         System.out.println(all.toString());
         JSONArray next = (JSONArray) all.get("array");
@@ -45,5 +45,5 @@ public class JsonReader {
             System.out.println("제목 : " + object.get("title"));
             System.out.println("사진링크 : " + object.get("thumbLink"));
         }
-    }
+    }*/
 }
