@@ -1,4 +1,4 @@
-package com.example.board.intern_board;
+package com.example.bulletin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

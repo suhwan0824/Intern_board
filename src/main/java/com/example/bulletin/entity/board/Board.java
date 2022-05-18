@@ -1,16 +1,17 @@
-package com.example.board.intern_board.entity.board;
+package com.example.bulletin.entity.board;
 
 
-import com.example.board.intern_board.entity.BaseTimeEntity;
+import com.example.bulletin.entity.BaseTimeEntity;
 import lombok.*;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-@Setter
+@Entity
 public class Board extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +21,7 @@ public class Board extends BaseTimeEntity {
     private int readCnt;
     private String registerId;
 
+    @Builder
     public Board(Long id, String title, String content, int readCnt, String registerId) {
         this.id = id;
         this.title = title;
